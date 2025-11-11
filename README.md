@@ -1135,19 +1135,4 @@ See [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🚀 Roadmap
-
-Future enhancements planned:
-
-- [ ] Admin UI dashboard with live preview
-- [ ] Custom topic filtering by tags
-- [ ] Multiple language support (i18n)
-- [ ] API endpoints for programmatic access
-- [ ] Integration with discourse-solved plugin
-- [ ] Custom formatting templates
-- [ ] Export to other formats (JSON, XML)
-- [ ] Advanced analytics dashboard
-
----
-
 Made with ❤️ for the Discourse community
