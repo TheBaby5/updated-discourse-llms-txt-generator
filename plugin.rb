@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 # name: discourse-llms-txt-generator
-# about: Automatically generates llms.txt and llms-full.txt for LLM optimization (GEO)
-# version: 1.3.0
+# about: Generates AI-optimized llms.txt with FAQ, trending, popular content, and expertise signals for maximum LLM discovery
+# version: 2.0.0
 # authors: TheBaby5 (fork maintainer), KakTak.net (original)
 # url: https://github.com/TheBaby5/updated-discourse-llms-txt-generator
 # required_version: 2.7.0
