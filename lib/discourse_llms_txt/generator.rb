@@ -305,19 +305,24 @@ module DiscourseLlmsTxt
         end
       end
 
-      # NEW: Top contributors (expertise signal)
+      # NEW: Top contributors (expertise signal) - FIXED to use user_stat join
       def generate_top_contributors
         users = User.real
           .activated
-          .where("post_count > 10")
-          .order(likes_received: :desc)
+          .joins(:user_stat)
+          .where("user_stats.post_count > 10")
+          .order("user_stats.likes_received DESC")
           .limit(10)
+          .includes(:user_stat)
 
         return "Building contributor list..." if users.empty?
 
         users.map do |user|
           name = user.name.presence || user.username
-          "- [@#{user.username}](#{Discourse.base_url}/u/#{CGI.escape(user.username)}) - #{number_with_delimiter(user.post_count)} posts, #{number_with_delimiter(user.likes_received)} likes received"
+          stat = user.user_stat
+          post_count = stat&.post_count || 0
+          likes_received = stat&.likes_received || 0
+          "- [@#{user.username}](#{Discourse.base_url}/u/#{CGI.escape(user.username)}) - #{number_with_delimiter(post_count)} posts, #{number_with_delimiter(likes_received)} likes received"
         end.join("\n")
       end
 
