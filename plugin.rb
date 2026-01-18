@@ -2,9 +2,9 @@
 
 # name: discourse-llms-txt-generator
 # about: Automatically generates llms.txt and llms-full.txt for LLM optimization (GEO)
-# version: 1.2.0
-# authors: KakTak.net
-# url: https://github.com/kaktaknet/discourse-llms-txt-generator
+# version: 1.3.0
+# authors: TheBaby5 (fork maintainer), KakTak.net (original)
+# url: https://github.com/TheBaby5/updated-discourse-llms-txt-generator
 # required_version: 2.7.0
 
 enabled_site_setting :llms_txt_enabled
